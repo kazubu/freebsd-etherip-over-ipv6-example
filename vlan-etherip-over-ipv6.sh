@@ -6,7 +6,7 @@ ifconfig em1 inet6 2001:db8::1/64
 ifconfig em1 -rxcsum -txcsum -lro -rxcsum6 -txcsum6 up 
 
 # Ethernet side
-ifconfig em2 -rxcsum -txcsum -lro -rxcsum6 -txcsum6 -vlanhwcsum -vlanhwfilter -vlantso up 
+ifconfig em2 -rxcsum -txcsum -lro -rxcsum6 -txcsum6 -vlanhwtag -vlanhwcsum -vlanhwfilter -vlantso up
 
 ## Create VLAN logical interface
 ifconfig em2.10 plumb
